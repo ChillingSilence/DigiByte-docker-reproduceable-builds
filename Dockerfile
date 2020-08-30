@@ -15,7 +15,8 @@ RUN DEBIAN_FRONTEND="noninteractive" apt-get update \
   && ln -fs /usr/share/zoneinfo/${LOCALTIMEZONE} /etc/localtime \
   && dpkg-reconfigure --frontend noninteractive tzdata \
   && apt-get install -y wget git build-essential libtool autotools-dev automake \
-  pkg-config
+  pkg-config curl python
+# /data/digibyte/depends/sources/xcb-proto-1.10.tar.bz2 needs Python >= 2.5
 # libssl-dev libevent-dev bsdmainutils python3 libboost-system-dev \
 #  libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libboost-thread-dev \
 #  libdb-dev libdb++-dev
