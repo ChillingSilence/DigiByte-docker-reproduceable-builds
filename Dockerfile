@@ -31,7 +31,7 @@ RUN cd ${ROOTDATADIR}/digibyte \
 	&& cd .. \
 	&& ./contrib/install_db4.sh `pwd` \
 	&& ./autogen.sh \
-	&& ./configureBDB_LIBS="-L${ROOTDATADIR}/digibyte/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${ROOTDATADIR}/digibyte/include" --prefix=$PWD/depends/x86_64-pc-linux-gnu
+	&& ./configureBDB_LIBS="-L${ROOTDATADIR}/digibyte/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${ROOTDATADIR}/digibyte/include" --prefix=$PWD/depends/x86_64-pc-linux-gnu \
 	&& make
 
 # Verification time
